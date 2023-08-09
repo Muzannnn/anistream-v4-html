@@ -1,0 +1,136 @@
+$main-color: #1E2027;
+$second-color: #282C37;
+$third-color: #343842;
+$fhour-color: #3F434F;
+$five-color: #A1A1A1;
+$anistream-color: #3EB4E8;
+$anistream-color-hover: #0f7dac;
+
+
+body{
+ background-color: red;
+ margin: 0;
+}
+
+
+
+// ----NAVBAR----
+.navbar{
+    height: 72px;
+    width: auto;
+    background-color: $main-color;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.navbar > .left-side, 
+.navbar > .right-side, 
+.navbar > .center-side {
+    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.navbar > .left-side > .brand {
+    height: 39px;
+    margin-top: -8px;
+    padding: 0;
+}
+
+
+
+.navbar > .center-side > form {
+    margin: 0;
+    padding: 0;
+}
+@media only screen and (max-width: 950px) {
+    .navbar > .left-side > .brand {
+        height: 39px;
+        margin-top: -8px;
+        padding: 0;
+        display: none;
+    }
+
+    .navbar > .left-side > .icon {
+        height: 39px;
+        margin-top: -8px;
+        padding: 0;
+    }
+
+    .navbar > .center-side > form > #search {
+        background-color: $second-color;
+        border-color: $fhour-color;
+        border-width: 2px;
+        border-radius: 33px;
+        height: 39px;
+        width: 200px;
+        color: $five-color;
+        transition: 0.3s;
+        padding-left: 21px;
+        padding-right: 21px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+}
+
+@media only screen and (min-width: 950px) {
+    .navbar > .left-side > .icon {
+        height: 39px;
+        margin-top: -8px;
+        padding: 0;
+        display: none;
+    }
+
+    .navbar > .center-side > form > #search {
+        background-color: $second-color;
+        border-color: $fhour-color;
+        border-width: 2px;
+        border-radius: 33px;
+        height: 39px;
+        width: 600px;
+        color: $five-color;
+        transition: 0.3s;
+        padding-left: 21px;
+        padding-right: 21px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+}
+
+
+.navbar > .center-side > form > #search:focus {
+    border-color: $anistream-color;
+    outline: none;
+    color: white;
+}
+
+.navbar > .center-side > form > .submit-search {
+    background-color: $anistream-color;
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    border: none;
+    color: white;
+    position: absolute;
+    margin-left: -35px;
+    margin-top: 4px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar > .center-side > form > .submit-search:hover {
+    background-color: $anistream-color-hover;
+    color: $five-color;
+    cursor: grab;
+}
+
+.navbar > .right-side > .profile {
+    height: 39px;
+    border-radius: 100%;
+    height: 45px;
+    width: 45px;
+}
