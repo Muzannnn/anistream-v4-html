@@ -1,3 +1,6 @@
+@font-face { font-family: Helvetica; src: url(../fonts/Helvetica.ttf);}
+@font-face { font-family: HelveticaBold; src: url(../fonts/Helvetica-Bold.ttf);}
+
 $main-color: #1E2027;
 $second-color: #282C37;
 $third-color: #343842;
@@ -8,8 +11,9 @@ $anistream-color-hover: #0f7dac;
 
 
 body{
- background-color: red;
+ background-color: blueviolet;
  margin: 0;
+ font-family: Helvetica;
 }
 
 
@@ -47,60 +51,47 @@ body{
     margin: 0;
     padding: 0;
 }
+
+.navbar > .left-side > .icon {
+    height: 39px;
+    margin-top: -8px;
+    padding: 0;
+}
+
 @media only screen and (max-width: 950px) {
     .navbar > .left-side > .brand {
-        height: 39px;
-        margin-top: -8px;
-        padding: 0;
         display: none;
     }
 
-    .navbar > .left-side > .icon {
-        height: 39px;
-        margin-top: -8px;
-        padding: 0;
-    }
-
     .navbar > .center-side > form > #search {
-        background-color: $second-color;
-        border-color: $fhour-color;
-        border-width: 2px;
-        border-radius: 33px;
-        height: 39px;
         width: 200px;
-        color: $five-color;
-        transition: 0.3s;
-        padding-left: 21px;
-        padding-right: 21px;
-        font-size: 12px;
-        font-weight: bold;
     }
+    
 }
 
 @media only screen and (min-width: 950px) {
     .navbar > .left-side > .icon {
-        height: 39px;
-        margin-top: -8px;
-        padding: 0;
         display: none;
     }
-
     .navbar > .center-side > form > #search {
-        background-color: $second-color;
-        border-color: $fhour-color;
-        border-width: 2px;
-        border-radius: 33px;
-        height: 39px;
         width: 600px;
-        color: $five-color;
-        transition: 0.3s;
-        padding-left: 21px;
-        padding-right: 21px;
-        font-size: 12px;
-        font-weight: bold;
     }
+    
 }
 
+.navbar > .center-side > form > #search {
+    background-color: $second-color;
+    border-color: $fhour-color;
+    border-width: 2px;
+    border-radius: 33px;
+    height: 39px;
+    color: $five-color;
+    transition: 0.3s;
+    padding-left: 21px;
+    padding-right: 21px;
+    font-size: 12px;
+    font-weight: bold;
+}
 
 .navbar > .center-side > form > #search:focus {
     border-color: $anistream-color;
@@ -125,7 +116,7 @@ body{
 .navbar > .center-side > form > .submit-search:hover {
     background-color: $anistream-color-hover;
     color: $five-color;
-    cursor: grab;
+    cursor: pointer;
 }
 
 .navbar > .right-side > .profile {
@@ -134,3 +125,54 @@ body{
     height: 45px;
     width: 45px;
 }
+
+// MAIN PARAMETERS
+
+// SIDEBAR
+
+@media only screen and (min-width: 950px) {
+    .main > .sidebar{
+        width: 309px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .main > .sidebar{
+        width: 75px;
+    }
+
+    .main > .sidebar > ul > li > a > text{
+        display: none;
+    }
+}
+
+.main > .sidebar{
+    background-color: $main-color;
+    height: 100%;
+    display: flex;
+    transition: 0.3s;
+}
+
+.main > .sidebar > ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: red;
+}
+
+.main > .sidebar > ul > li{
+    margin: 0;
+    padding: 0;
+    background-color: green;
+    list-style: none;
+}
+
+.main > .sidebar > ul > li > a{
+    margin: 0;
+    padding: 0;
+    background-color: blue;
+}
+
+
+// Main content
+
