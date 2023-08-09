@@ -9,6 +9,7 @@
 body {
   margin: 0;
   font-family: Helvetica;
+  background-color: #282C37;
 }
 
 .navbar {
@@ -44,6 +45,7 @@ body {
 .navbar > .left-side > .icon {
   height: 39px;
   margin-top: -8px;
+  margin-left: -6px;
   padding: 0;
 }
 
@@ -112,7 +114,7 @@ body {
 .main {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 @media only screen and (min-width: 950px) {
@@ -123,7 +125,7 @@ body {
     margin-left: 20px;
   }
   .main > .sidebar > ul > .separator {
-    width: 281px;
+    width: 240px;
   }
 }
 @media only screen and (max-width: 950px) {
@@ -179,6 +181,10 @@ body {
   color: #3EB4E8;
 }
 
+.main > .sidebar > ul > li > a > i {
+  width: 20px;
+}
+
 .main > .sidebar > ul > li > a > text {
   margin-left: 20px;
 }
@@ -198,4 +204,35 @@ body {
   width: 100%;
   height: 100%;
   background-color: #343842;
+}
+
+.main > .content > .slider {
+  width: auto;
+  height: 95%;
+  margin: 21px;
+  color: white;
+}
+
+.main > .content > .slider > .slide > .image {
+  width: 100%;
+  height: 283px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://occ-0-444-38.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABa9dNf8IG-4dJ1kzuimcEpopGr3RMtA6wnHYl1sMxnxKKiroY71sKVVYPjWikOp8PeCdOQt4maZc-Z1oSwHHkI3sCcepNOHHsqRP.jpg?r=233");
+  border-radius: 19px;
+}
+
+.main > .content > .slider > .slide > .radient {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.53) 0%, rgba(0, 0, 0, 0) 43%);
+  width: 100%;
+  height: 283px;
+  position: fixed;
+  border-radius: 19px;
+  display: flex;
+}
+
+.main > .content > .slider > .slide > .radient > h2 {
+  margin-bottom: 25px;
+  margin-top: auto;
 }/*# sourceMappingURL=styles.css.map */
