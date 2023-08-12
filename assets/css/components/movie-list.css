@@ -50,6 +50,15 @@ movie-list-wrapper > movie-list > movie-card-watch {
   overflow: hidden;
   scroll-snap-align: start;
 }
+movie-list-wrapper > movie-list > movie-card-watch > .image {
+  position: relative;
+}
+movie-list-wrapper > movie-list > movie-card-watch > .image:hover {
+  opacity: 1;
+}
+movie-list-wrapper > movie-list > movie-card-watch > .image:hover .overlay {
+  opacity: 1;
+}
 @media (min-width: 768px) {
   movie-list-wrapper > movie-list > movie-card-watch {
     min-width: calc(25% - 1.25rem);
@@ -62,10 +71,67 @@ movie-list-wrapper > movie-list > movie-card-watch {
     max-width: calc(100% - 1.25rem);
   }
 }
-movie-list-wrapper > movie-list > movie-card-watch > img {
+movie-list-wrapper > movie-list > movie-card-watch > .image > img {
   width: 100%;
   aspect-ratio: 16/9;
   border-radius: 18px;
+}
+movie-list-wrapper > movie-list > movie-card-watch > .image > .overlay {
+  position: absolute;
+  border-radius: 18px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.247);
+}
+movie-list-wrapper > movie-list > movie-card-watch > .image > .overlay > .icon {
+  color: #969696;
+  font-size: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  transition: 0.3s;
+}
+movie-list-wrapper > movie-list > movie-card-watch > .image > .overlay > .icon:hover {
+  filter: brightness(75%);
+}
+movie-list-wrapper > movie-list > movie-card-watch > div.image > div.progress-bar > div.time-total {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 99rem;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  height: 5px;
+  width: auto;
+  background-color: var(--color-border);
+}
+movie-list-wrapper > movie-list > movie-card-watch > div.image > div.progress-bar > div.time-remaining {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 99rem;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  height: 5px;
+  width: 50%;
+  background-color: var(--color-primary);
 }
 movie-list-wrapper > movie-list > movie-card-watch > div.info {
   margin: 1rem 0 1rem 0;

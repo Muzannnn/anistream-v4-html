@@ -2,6 +2,8 @@ nav.sidebar{
   display: flex;
   flex-direction: column;
   padding: 0.50rem;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
   & > nav-spacer{
     height: .24rem;
     border-radius: 99rem;
@@ -14,11 +16,15 @@ nav.sidebar{
     color: white;
     text-decoration: none;
     padding: 1rem;
+    @media (min-width: 768px){
+      &{
+        margin-right: .80rem;
+      }
+    }
     transition: color 0.2s ease-in-out;
     display: flex;
     gap: 1.5rem;
     align-items: baseline;
-    text-transform: capitalize;
     &.active {
       color: var(--color-primary);
     }
@@ -38,8 +44,22 @@ nav.sidebar{
       width: 1.25rem;
       text-align: center;
       font-size: 1.25rem;
-      
     }
-    
+    &.bottom{
+      margin-top: auto;
+    }
+    &.danger{
+      color: var(--color-danger);
+    }
+  }
+  & > footer {
+    color: var(--color-scondary);
+    margin-left: .75rem;
+    margin-bottom: 0.5rem;
+    @media (max-width: 768px){
+      &{
+        display: none;
+      }
+    }
   }
 }

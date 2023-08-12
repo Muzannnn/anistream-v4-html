@@ -2,6 +2,8 @@ nav.sidebar {
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
 }
 nav.sidebar > nav-spacer {
   height: 0.24rem;
@@ -19,7 +21,11 @@ nav.sidebar > a {
   display: flex;
   gap: 1.5rem;
   align-items: baseline;
-  text-transform: capitalize;
+}
+@media (min-width: 768px) {
+  nav.sidebar > a {
+    margin-right: 0.8rem;
+  }
 }
 nav.sidebar > a.active {
   color: var(--color-primary);
@@ -40,4 +46,20 @@ nav.sidebar > a > i {
   width: 1.25rem;
   text-align: center;
   font-size: 1.25rem;
+}
+nav.sidebar > a.bottom {
+  margin-top: auto;
+}
+nav.sidebar > a.danger {
+  color: var(--color-danger);
+}
+nav.sidebar > footer {
+  color: var(--color-scondary);
+  margin-left: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 768px) {
+  nav.sidebar > footer {
+    display: none;
+  }
 }/*# sourceMappingURL=sidebar.css.map */
