@@ -55,6 +55,74 @@ body {
   font-family: Helvetica, sans-serif;
   background-color: var(--color-surface);
 }
+body.registration {
+  color: white;
+  background-image: url(https://images6.alphacoders.com/122/1222494.png);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body.registration > div.registration-center {
+  margin: auto;
+  width: 30rem;
+  height: auto;
+  padding: 2.5rem;
+  background: rgba(30, 32, 39, 0.69);
+  box-shadow: 0px 0px 48px rgba(0, 0, 0, 0.75);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  text-align: center;
+}
+body.registration > div.registration-center > a > img {
+  height: 3rem;
+}
+body.registration > div.registration-center > form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+body.registration > div.registration-center > form > input {
+  margin: 0;
+  background-color: transparent;
+  color: white;
+  padding: 15px;
+  font-size: 0.85rem;
+  outline: none;
+  border: 1px white solid;
+}
+body.registration > div.registration-center > form > button {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  padding: 1rem;
+  font-size: 1rem;
+  color: white;
+  background-color: var(--color-background);
+  border: none;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+body.registration > div.registration-center > form > button:hover {
+  cursor: pointer;
+  filter: brightness(0.9);
+}
+body.registration > div.registration-center > p {
+  color: var(--color-scondary);
+}
+body.registration > div.registration-center > p > a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.2s ease-in-out;
+}
+body.registration > div.registration-center > p > a:hover {
+  text-decoration-color: var(--color-primary);
+}
+body.registration > div.registration-center > footer {
+  color: var(--color-border);
+}
 body nav:not(.sidebar) {
   background-color: var(--color-surface);
   display: flex;
@@ -94,7 +162,7 @@ body nav:not(.sidebar) > div.search {
 }
 @media (min-width: 768px) {
   body nav:not(.sidebar) > div.search {
-    width: 22em;
+    width: 27em;
   }
 }
 body nav:not(.sidebar) > div.search > input {
@@ -356,8 +424,8 @@ body > main > main-content movie-list-wrapper > movie-list > movie-card-watch > 
   border-radius: 99rem;
   margin-top: auto;
   margin-bottom: 1rem;
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   height: 5px;
   width: auto;
   background-color: var(--color-border);
@@ -371,8 +439,8 @@ body > main > main-content movie-list-wrapper > movie-list > movie-card-watch > 
   border-radius: 99rem;
   margin-top: auto;
   margin-bottom: 1rem;
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   height: 5px;
   width: 50%;
   background-color: var(--color-primary);
@@ -417,7 +485,7 @@ body > main > main-content movie-list-wrapper > movie-list > movie-card > a {
   text-decoration: none;
 }
 body > main > main-content movie-list-wrapper > movie-list > movie-card > a:hover > img, body > main > main-content movie-list-wrapper > movie-list > movie-card > a:hover > h3 {
-  filter: brightness(75%);
+  filter: brightness(60%);
 }
 body > main > main-content movie-list-wrapper > movie-list > movie-card > a > img {
   width: 100%;

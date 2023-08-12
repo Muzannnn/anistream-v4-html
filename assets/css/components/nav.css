@@ -37,7 +37,7 @@ nav:not(.sidebar) > div.search {
 }
 @media (min-width: 768px) {
   nav:not(.sidebar) > div.search {
-    width: 22em;
+    width: 27em;
   }
 }
 nav:not(.sidebar) > div.search > input {

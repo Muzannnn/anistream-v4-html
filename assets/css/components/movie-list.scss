@@ -113,8 +113,8 @@ movie-list-wrapper{
         border-radius: 99rem;
         margin-top: auto;
         margin-bottom: 1rem;
-        margin-left: 1.25rem;
-        margin-right: 1.25rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
         height: 5px;
         width: auto;
         background-color: var(--color-border);
@@ -128,8 +128,8 @@ movie-list-wrapper{
         border-radius: 99rem;
         margin-top: auto;
         margin-bottom: 1rem;
-        margin-left: 1.25rem;
-        margin-right: 1.25rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
         height: 5px;
         width: 50%;
         background-color: var(--color-primary);
@@ -181,7 +181,7 @@ movie-list-wrapper{
         &:hover{
           & > img,
           & > h3{
-            filter: brightness(75%);
+            filter: brightness(60%);
           }
         }
       }

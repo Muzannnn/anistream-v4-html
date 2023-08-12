@@ -112,8 +112,8 @@ movie-list-wrapper > movie-list > movie-card-watch > div.image > div.progress-ba
   border-radius: 99rem;
   margin-top: auto;
   margin-bottom: 1rem;
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   height: 5px;
   width: auto;
   background-color: var(--color-border);
@@ -127,8 +127,8 @@ movie-list-wrapper > movie-list > movie-card-watch > div.image > div.progress-ba
   border-radius: 99rem;
   margin-top: auto;
   margin-bottom: 1rem;
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   height: 5px;
   width: 50%;
   background-color: var(--color-primary);
@@ -173,7 +173,7 @@ movie-list-wrapper > movie-list > movie-card > a {
   text-decoration: none;
 }
 movie-list-wrapper > movie-list > movie-card > a:hover > img, movie-list-wrapper > movie-list > movie-card > a:hover > h3 {
-  filter: brightness(75%);
+  filter: brightness(60%);
 }
 movie-list-wrapper > movie-list > movie-card > a > img {
   width: 100%;
