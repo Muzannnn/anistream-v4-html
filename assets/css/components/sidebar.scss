@@ -1,0 +1,45 @@
+nav.sidebar{
+  display: flex;
+  flex-direction: column;
+  padding: 0.50rem;
+  & > nav-spacer{
+    height: .24rem;
+    border-radius: 99rem;
+    background-color: var(--color-border);
+    width: 100%;
+    opacity: .5;
+    margin: .5rem 0;
+  }
+  & > a{
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    transition: color 0.2s ease-in-out;
+    display: flex;
+    gap: 1.5rem;
+    align-items: baseline;
+    text-transform: capitalize;
+    &.active {
+      color: var(--color-primary);
+    }
+    & > span.text{
+      transition: display 0.3s ease-in-out;
+      @media (max-width: 768px){
+        &{
+          display: none;
+        }
+      }
+    }
+    &:hover{
+      color: var(--color-primary);
+      filter: brightness(0.9);
+    }
+    & > i{
+      width: 1.25rem;
+      text-align: center;
+      font-size: 1.25rem;
+      
+    }
+    
+  }
+}

@@ -1,0 +1,70 @@
+@import "fonts";
+
+:root{
+  --color-surface: #1E2027;
+  --color-background: #282C37;
+
+  --color-border: #3F434F;
+
+  --color-primary: #3EB4E8;
+}
+
+body{
+  margin: 0;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Helvetica, sans-serif;
+  background-color: var(--color-surface);
+  @import "components/nav";
+  & > main{ 
+    display: flex; 
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    @import "components/sidebar";
+    & > main-content{
+      display: block;
+      flex: 1;
+      overflow: auto;
+      max-height: 100%;
+      background-color: var(--color-background);
+      padding: 2rem;
+      color: white;
+      & > h2{
+        border-left: 4px solid var(--color-primary);
+        padding: .25rem .6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        @media (max-width: 768px){
+          &{
+            font-size: 0.95rem;
+          }
+  
+        }
+        & > a{
+          color: var(--color-primary);
+          font-size: .75rem;
+          @media (max-width: 768px){
+            &{
+              font-size: .70rem;
+            }
+    
+          }
+          padding: .75rem;
+          display: block;
+          margin: -.75rem;
+          text-decoration: underline;
+          text-decoration-color: transparent;
+          transition: text-decoration-color 0.2s ease-in-out; 
+          &:hover{
+            text-decoration-color: var(--color-primary);
+          }
+        }
+      }
+      @import "components/movie-list";
+    }
+  }
+}

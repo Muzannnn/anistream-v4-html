@@ -1,0 +1,77 @@
+nav:not(.sidebar) {
+  background-color: var(--color-surface);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+}
+nav:not(.sidebar) > img {
+  height: 2rem;
+}
+@media (max-width: 768px) {
+  nav:not(.sidebar) > img.brand {
+    display: none;
+  }
+  nav:not(.sidebar) > img.logo {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  nav:not(.sidebar) > img.brand {
+    display: block;
+  }
+  nav:not(.sidebar) > img.logo {
+    display: none;
+  }
+}
+nav:not(.sidebar) > div.search {
+  border-radius: 99rem;
+  border: 2px solid var(--color-border);
+  overflow: hidden;
+  display: flex;
+}
+@media (max-width: 768px) {
+  nav:not(.sidebar) > div.search {
+    width: 12em;
+  }
+}
+@media (min-width: 768px) {
+  nav:not(.sidebar) > div.search {
+    width: 22em;
+  }
+}
+nav:not(.sidebar) > div.search > input {
+  background-color: var(--color-surface);
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+nav:not(.sidebar) > div.search > input:focus {
+  outline: none;
+}
+nav:not(.sidebar) > div.search > button {
+  background-color: var(--color-primary);
+  border: none;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 99rem;
+  margin: 0.25rem;
+  transition: filter 0.2s ease-in-out;
+}
+nav:not(.sidebar) > div.search > button:focus {
+  outline: none;
+}
+nav:not(.sidebar) > div.search > button:hover {
+  cursor: pointer;
+  filter: brightness(0.5);
+}
+nav:not(.sidebar) > div.user {
+  border-radius: 99rem;
+  overflow: hidden;
+  height: 2.75rem;
+}
+nav:not(.sidebar) > div.user > img {
+  height: 100%;
+  width: auto;
+}/*# sourceMappingURL=nav.css.map */

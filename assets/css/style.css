@@ -1,0 +1,337 @@
+@font-face {
+  font-family: Helvetica;
+  src: url(../../fonts/helvetica-light-587ebe5a59211.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: Helvetica;
+  src: url(../../fonts/Helvetica.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Helvetica;
+  src: url(../../fonts/Helvetica-Oblique.ttf);
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: Helvetica;
+  src: url(../../fonts/Helvetica-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: Helvetica;
+  src: url(../../fonts/Helvetica-BoldOblique.ttf);
+  font-weight: 700;
+  font-style: italic;
+}
+:root {
+  --color-surface: #1E2027;
+  --color-background: #282C37;
+  --color-border: #3F434F;
+  --color-primary: #3EB4E8;
+}
+
+body {
+  margin: 0;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Helvetica, sans-serif;
+  background-color: var(--color-surface);
+}
+body nav:not(.sidebar) {
+  background-color: var(--color-surface);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+}
+body nav:not(.sidebar) > img {
+  height: 2rem;
+}
+@media (max-width: 768px) {
+  body nav:not(.sidebar) > img.brand {
+    display: none;
+  }
+  body nav:not(.sidebar) > img.logo {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  body nav:not(.sidebar) > img.brand {
+    display: block;
+  }
+  body nav:not(.sidebar) > img.logo {
+    display: none;
+  }
+}
+body nav:not(.sidebar) > div.search {
+  border-radius: 99rem;
+  border: 2px solid var(--color-border);
+  overflow: hidden;
+  display: flex;
+}
+@media (max-width: 768px) {
+  body nav:not(.sidebar) > div.search {
+    width: 12em;
+  }
+}
+@media (min-width: 768px) {
+  body nav:not(.sidebar) > div.search {
+    width: 22em;
+  }
+}
+body nav:not(.sidebar) > div.search > input {
+  background-color: var(--color-surface);
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+body nav:not(.sidebar) > div.search > input:focus {
+  outline: none;
+}
+body nav:not(.sidebar) > div.search > button {
+  background-color: var(--color-primary);
+  border: none;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 99rem;
+  margin: 0.25rem;
+  transition: filter 0.2s ease-in-out;
+}
+body nav:not(.sidebar) > div.search > button:focus {
+  outline: none;
+}
+body nav:not(.sidebar) > div.search > button:hover {
+  cursor: pointer;
+  filter: brightness(0.5);
+}
+body nav:not(.sidebar) > div.user {
+  border-radius: 99rem;
+  overflow: hidden;
+  height: 2.75rem;
+}
+body nav:not(.sidebar) > div.user > img {
+  height: 100%;
+  width: auto;
+}
+body > main {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+}
+body > main nav.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+body > main nav.sidebar > nav-spacer {
+  height: 0.24rem;
+  border-radius: 99rem;
+  background-color: var(--color-border);
+  width: 100%;
+  opacity: 0.5;
+  margin: 0.5rem 0;
+}
+body > main nav.sidebar > a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  transition: color 0.2s ease-in-out;
+  display: flex;
+  gap: 1.5rem;
+  align-items: baseline;
+  text-transform: capitalize;
+}
+body > main nav.sidebar > a.active {
+  color: var(--color-primary);
+}
+body > main nav.sidebar > a > span.text {
+  transition: display 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+  body > main nav.sidebar > a > span.text {
+    display: none;
+  }
+}
+body > main nav.sidebar > a:hover {
+  color: var(--color-primary);
+  filter: brightness(0.9);
+}
+body > main nav.sidebar > a > i {
+  width: 1.25rem;
+  text-align: center;
+  font-size: 1.25rem;
+}
+body > main > main-content {
+  display: block;
+  flex: 1;
+  overflow: auto;
+  max-height: 100%;
+  background-color: var(--color-background);
+  padding: 2rem;
+  color: white;
+}
+body > main > main-content > h2 {
+  border-left: 4px solid var(--color-primary);
+  padding: 0.25rem 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+@media (max-width: 768px) {
+  body > main > main-content > h2 {
+    font-size: 0.95rem;
+  }
+}
+body > main > main-content > h2 > a {
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  padding: 0.75rem;
+  display: block;
+  margin: -0.75rem;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.2s ease-in-out;
+}
+@media (max-width: 768px) {
+  body > main > main-content > h2 > a {
+    font-size: 0.7rem;
+  }
+}
+body > main > main-content > h2 > a:hover {
+  text-decoration-color: var(--color-primary);
+}
+body > main > main-content movie-list-wrapper {
+  display: block;
+  position: relative;
+  margin-bottom: 2rem;
+  z-index: 0;
+}
+body > main > main-content movie-list-wrapper::after, body > main > main-content movie-list-wrapper::before {
+  content: "";
+  width: 2rem;
+  height: 100%;
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(to right, var(--color-background), var(--color-background), transparent);
+  z-index: 2;
+}
+body > main > main-content movie-list-wrapper::after {
+  right: -2rem;
+  transform: scaleX(-1);
+}
+body > main > main-content movie-list-wrapper::before {
+  left: -2rem;
+}
+body > main > main-content movie-list-wrapper > movie-list {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  padding: 0 2rem 0.25rem;
+  margin: 0 -2rem;
+  scroll-padding: 0 2rem;
+  z-index: 1;
+  scrollbar-color: var(--color-border) var(--color-background);
+  scrollbar-width: thin;
+}
+body > main > main-content movie-list-wrapper > movie-list::-webkit-scrollbar {
+  height: 0.25rem;
+}
+body > main > main-content movie-list-wrapper > movie-list::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+body > main > main-content movie-list-wrapper > movie-list::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-width: 0 2rem 0 2rem;
+  border-style: solid;
+  border-color: var(--color-background);
+}
+body > main > main-content movie-list-wrapper > movie-list > movie-card-watch {
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+@media (min-width: 768px) {
+  body > main > main-content movie-list-wrapper > movie-list > movie-card-watch {
+    min-width: calc(25% - 1.25rem);
+    max-width: calc(25% - 1.25rem);
+  }
+}
+@media (max-width: 768px) {
+  body > main > main-content movie-list-wrapper > movie-list > movie-card-watch {
+    min-width: calc(100% - 1.25rem);
+    max-width: calc(100% - 1.25rem);
+  }
+}
+body > main > main-content movie-list-wrapper > movie-list > movie-card-watch > img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 18px;
+}
+body > main > main-content movie-list-wrapper > movie-list > movie-card-watch > div.info {
+  margin: 1rem 0 1rem 0;
+}
+body > main > main-content movie-list-wrapper > movie-list > movie-card-watch > div.info > h3 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+body > main > main-content movie-list-wrapper > movie-list > movie-card-watch > div.info > p {
+  font-size: 0.95rem;
+  margin: 0;
+  filter: brightness(50%);
+  z-index: 1;
+}
+body > main > main-content movie-list-wrapper > movie-list > movie-card {
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+@media (min-width: 768px) {
+  body > main > main-content movie-list-wrapper > movie-list > movie-card {
+    min-width: calc(12% - 1rem);
+    max-width: calc(12% - 1rem);
+  }
+  body > main > main-content movie-list-wrapper > movie-list > movie-card > div.info > h3 {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 768px) {
+  body > main > main-content movie-list-wrapper > movie-list > movie-card {
+    min-width: calc(50% - 1.25rem);
+    max-width: calc(50% - 1.25rem);
+  }
+  body > main > main-content movie-list-wrapper > movie-list > movie-card > div.info > h3 {
+    font-size: 0.75rem;
+  }
+}
+body > main > main-content movie-list-wrapper > movie-list > movie-card > a {
+  color: white;
+  text-decoration: none;
+}
+body > main > main-content movie-list-wrapper > movie-list > movie-card > a:hover > img, body > main > main-content movie-list-wrapper > movie-list > movie-card > a:hover > h3 {
+  filter: brightness(75%);
+}
+body > main > main-content movie-list-wrapper > movie-list > movie-card > a > img {
+  width: 100%;
+  aspect-ratio: 9/12;
+  border-radius: 18px;
+  transition: 0.3s;
+}
+body > main > main-content movie-list-wrapper > movie-list > movie-card > a > div.info {
+  margin: 0.5rem 0 1rem 0;
+}
+body > main > main-content movie-list-wrapper > movie-list > movie-card > a > div.info > h3 {
+  margin: 0;
+}
+body > main > main-content movie-list-wrapper > movie-list > movie-card > a > div.info > p {
+  font-size: 0.95rem;
+  margin: 0;
+  filter: brightness(50%);
+  z-index: 1;
+}/*# sourceMappingURL=style.css.map */
